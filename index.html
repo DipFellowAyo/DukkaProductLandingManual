@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manual</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header_note">
+            <h1>Product Manual</h1>
+            <h6>There's a world of opportunities that Dukka can help you unlock. In this manual, we will walk you through a step by step process on how you can customise Dukka for your business.</h6>
+            <form action="">
+                <input onclick="showMyUL()" onkeyup="filterMyUL()" id="search" class="search" type="text" placeholder="Search Features..." name="search">
+            </form>
+            <ul id="myUL" class="myUL">
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#payment_options">Payment Options</a></li>
+                <li><a href="#invoice">Invoice</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#customer">Customer</a></li>
+                <li><a href="#expenses">Expenses</a></li>
+                <li><a href="#tax_settings">Tax Settings</a></li>
+              </ul>
+        </div>
+
+        <div class="header_img">
+            <img src="images/dukkascreens.png" alt="header_img">
+        </div>
+
+    </header>
+
+
+    <section>
+
+        <div class="row">
+
+            <div class="container con1" id="inventory">
+                <div class="logo_container"><img class="logo" src="vectors/inventory.png" alt="inventory_img"></div>
+                <h1 class="subheading">Inventory</h1>
+                <h6 class="subtext">An inventory is a complete list of items in your store. These items are products you have for sale or services you render to clients.</h6>
+                <a href="#"><h6 class="link">See how to use our inventory feature →</h6></a>
+            </div>
+
+            <div class="container" id="payment_options">
+                <div class="logo_container"><img class="logo" src="vectors/paymentoption.png" alt="payment_options_img"></div>
+                <h1 class="subheading">Payment Options</h1>
+                <h6 class="subtext">With the dukka app, you will be able to accept multiple forms of payment from yur customers. </h6>
+                <a href="#"><h6 class="link">See how to use the differnet payment options →</h6></a>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="container con1" id="invoice">
+                <div class="logo_container"><img class="logo" src="vectors/invoice.png" alt="invoice_img"></div>
+                <h1 class="subheading">Invoice</h1>
+                <h6 class="subtext">An invoice is a preliminary bill of sale sent to buyers describing  shipment of goods or services to be rendered, in advance of its delivery. </h6>
+                <a href="#"><h6 class="link">See how to use our invoice feature →</h6></a>
+            </div>
+
+            <div class="container" id="performance">
+                <div class="logo_container"><img class="logo" src="vectors/performance.png" alt="performance_img"></div>
+                <h1 class="subheading">Performance</h1>
+                <h6 class="subtext">A business performance overview gives you wings. The performance gives you real-time and historical insight into how your business is performing. </h6>
+                <a href="#"><h6 class="link">See how to use our Performance feature →</h6></a>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="container con1" id="customer">
+                <div class="logo_container"><img class="logo" src="vectors/customer.png" alt="customer_img"></div>
+                <h1 class="subheading">Customer</h1>
+                <h6 class="subtext">A customer is an individual or business that is paying you for what you have to sell- be it goods or services. </h6>
+                <a href="#"><h6 class="link">See how to add a customer of the Dukka App →</h6></a>
+            </div>
+
+            <div class="container" id="expenses">
+                <div class="logo_container"><img class="logo" src="vectors/expenses.png" alt="expenses_img"></div>
+                <h1 class="subheading">Expenses</h1>
+                <h6 class="subtext">Expenses - money spent on a daily basis to run/operate your business. Examples of expenses are fuel purchases for generators, drinking water purchases, etc. </h6>
+                <a href="#"><h6 class="link">See how to use our expenses feature →</h6></a>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="container1" id="tax_settings">
+                <div class="logo_container"><img class="logo" src="vectors/tax.png" alt="tax_img"></div>
+                <h1 class="subheading">Tax Settings</h1>
+                <h6 class="subtext">Tax is an amount of money that a government requires people to pay according to their income, the value of their property, etc. </h6>
+                <a href="#"><h6 class="link">See how to set taxes on the Dukka App →</h6></a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        function showMyUL() {
+            document.getElementById('myUL').style.visibility = 'visible'
+        }
+
+        function filterMyUL() {
+            var input, filter, myUL, li, a, i, txtValue;
+            input = document.getElementById("search");
+            filter =input.value.toUpperCase();
+            myUL = document.getElementById('myUL');
+            li = myUL.getElementsByTagName('li');
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+
+        }
+
+        document.addEventListener('mouseup', function(event) {
+            var myUL = document.getElementById('myUL');
+            var box = document.getElementById('search');
+            if (event.target != box && event.target.parentNode != box) {
+                if (myUL.style.visibility === 'visible') {
+                    myUL.style.visibility = 'hidden';
+                    document.getElementById('search').value= '';
+                }
+                document.getElementById('search').value= '';
+            }
+        })
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById('search').value= '';
+                if (myUL.style.visibility === 'visible') {
+                    myUL.style.visibility = 'hidden';
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+
+</html>
