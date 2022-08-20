@@ -46,7 +46,7 @@ header {
 }
 
 .search {
-    background-image: url('/images/search.png');
+    background: url('../images/search.png');
     background-position: 10px 12px;
     background-repeat: no-repeat;
     border: 1.5px solid #000000;
