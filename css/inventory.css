@@ -261,3 +261,158 @@ span:hover {
     opacity: 0.4;
     transition: all 1s;
 }
+
+
+@media only screen and (max-width: 1300px) {
+    header {
+        width: 100%;
+        position: relative;
+        margin: auto;
+        display: block;
+        background-color: #f2f3fc;
+        overflow: hidden;
+    }
+
+    header img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.25;
+    }
+
+    header h1 {
+        position: absolute;
+        font-family: "Montserrat", sans-serif;
+        width: 80%;
+        margin: auto;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5rem;
+        font-weight: 600;
+        color: #000000;
+    }
+
+    article {
+        margin: 4rem 0 4rem;
+    }
+
+    .section_header {
+        width: 90%;
+        margin: auto;
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    span {
+        width: 100%;
+        text-align: start;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 8%;
+        /* transition: 0.5s; */
+    }
+
+    .section_header:after {
+        /* margin: auto; */
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .section_header.active span {
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-left: 8%;
+    }
+
+    .leftView {
+        display: none;
+    }
+
+    .rightView {
+        display: none;
+    }
+
+    .mainView {
+        /* height: 100%vh; */
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    .mainView img {
+        display: block;
+        width: 80%;
+        margin: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .gallery_footer {
+        justify-content: space-between;
+    }
+
+    .gallery_footer h6 {
+        width: 50%;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .arrow_box {
+        width: 15%;
+        padding: 0.8rem 0;
+        border: none;
+        box-shadow: none;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    header h1 {
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    article {
+        margin: 1.5rem 0 1.5rem;
+    }
+
+    .bullet_point {
+        height: 17px;
+        width: 17px;
+    }
+
+    span {
+        text-align: start;
+        font-size: 0.6rem;
+        font-weight: 400;
+        margin-left: 8%;
+        /* transition: 0.5s; */
+    }
+
+    .section_header:after {
+        /* margin: auto; */
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .section_header.active span {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .gallery_footer h6 {
+        width: 60%;
+        font-size: 0.8rem;
+    }
+
+    .arrow {
+        height: 12px;
+        width: 12px;
+    }
+}
